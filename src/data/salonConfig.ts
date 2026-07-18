@@ -240,7 +240,7 @@ const salonConfig: SalonConfig = {
   // ——— Footer credit ———
   siteCredit: {
     enabled: true,
-    businessName: "Your Business Name",
+    businessName: "GranTech IT Solutions",
     url: "",
   },
 
