@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+/*
+  Brand colors are injected as CSS variables from salonConfig (see layout.tsx).
+  Change hex values in src/data/salonConfig.ts — not here — for client re-skins.
+*/
+:root {
+  --salon-primary: #c4787a;
+  --salon-primary-dark: #a85f62;
+  --salon-secondary: #f3e4e2;
+  --salon-background: #fbf7f5;
+  --salon-foreground: #2c2422;
+  --salon-muted: #6b5e5a;
+}
+
+@theme inline {
+  --color-primary: var(--salon-primary);
+  --color-primary-dark: var(--salon-primary-dark);
+  --color-secondary: var(--salon-secondary);
+  --color-background: var(--salon-background);
+  --color-foreground: var(--salon-foreground);
+  --color-muted: var(--salon-muted);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  background-color: var(--salon-background);
+  color: var(--salon-foreground);
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 100% -10%, color-mix(in srgb, var(--salon-secondary) 80%, transparent), transparent),
+    radial-gradient(ellipse 60% 40% at 0% 100%, color-mix(in srgb, var(--salon-secondary) 55%, transparent), transparent);
+  background-attachment: fixed;
+}
+
+.font-display {
+  font-family: var(--font-display), ui-serif, Georgia, serif;
+}
+
+@keyframes hero-in {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-hero-in {
+  animation: hero-in 0.9s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-hero-in {
+    animation: none;
+  }
+}
