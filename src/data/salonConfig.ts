@@ -118,28 +118,28 @@ const salonConfig: SalonConfig = {
   name: "Noir Nail Bar",
   tagline: "Polished nails. Soft skin. Quiet luxury.",
   about:
-    "Noir Nail Bar is a calm corner for manicures, pedicures, and glow-up beauty rituals. We focus on clean technique, lasting finishes, and a space that feels unhurried from the moment you sit down.",
+    "Noir Nail Bar is a calm, appointment-led studio for manicures, pedicures, and glow-up beauty rituals. We focus on clean technique, lasting finishes, and a space that feels unhurried from the moment you sit down.",
   logoSrc: "",
 
-  // ——— Colors (swap these hex values to rebrand) ———
+  // ——— Colors (refined sage — distinct from beauty2/beauty4) ———
   colors: {
-    primary: "#5C6B5A",
-    primaryDark: "#465344",
-    secondary: "#E4E8E1",
-    background: "#F5F6F3",
-    foreground: "#1F2420",
-    muted: "#5A635C",
+    primary: "#4F5F4D",
+    primaryDark: "#3B493A",
+    secondary: "#E0E5DC",
+    background: "#F2F4F0",
+    foreground: "#161B17",
+    muted: "#566058",
   },
 
   // ——— Hero ———
   hero: {
     image:
-      "https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=1920&q=80",
+      "https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=2400&q=85",
     imageAlt: "Manicurist applying nail polish at a nail bar",
-    ctaLabel: "Book Now",
+    ctaLabel: "Reserve an Appointment",
   },
 
-  // ——— Services (add, remove, or rewrite freely) ———
+  // ——— Services ———
   services: [
     {
       name: "Classic Manicure",
@@ -176,27 +176,27 @@ const salonConfig: SalonConfig = {
   // ——— Gallery ———
   gallery: [
     {
-      src: "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=800&q=80",
+      src: "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1200&q=85",
       alt: "Fresh manicure with soft pink polish",
     },
     {
-      src: "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=800&q=80",
+      src: "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=1000&q=85",
       alt: "Nail art detail close-up",
     },
     {
-      src: "https://images.unsplash.com/photo-1522338140262-f46f5913618a?auto=format&fit=crop&w=800&q=80",
-      alt: "Beauty products arranged on a counter",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80",
+      src: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1000&q=85",
       alt: "Facial skincare treatment",
     },
     {
-      src: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=800&q=80",
+      src: "https://images.unsplash.com/photo-1522338140262-f46f5913618a?auto=format&fit=crop&w=1000&q=85",
+      alt: "Beauty products arranged on a counter",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=1200&q=85",
       alt: "Makeup brushes and beauty tools",
     },
     {
-      src: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=800&q=80",
+      src: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1000&q=85",
       alt: "Cosmetic products flat lay",
     },
   ],
@@ -216,16 +216,15 @@ const salonConfig: SalonConfig = {
   location: {
     addressLine1: "88 Orchard Lane",
     addressLine2: "Unit 2, Your City, ST 00000",
-    // Replace with client's Google Maps embed src (Share → Embed a map)
     mapEmbedUrl:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.2412648715453!2d-73.98823492346386!3d40.75889597138558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus",
   },
 
-  // ——— Contact (primary CTA = WhatsApp) ———
+  // ——— Contact ———
   contact: {
     email: "christophergranville2@gmail.com",
     whatsappNumber: "2349133871053",
-    whatsappMessage: "Hi! I'd like to book an appointment at Noir Nail Bar.",
+    whatsappMessage: "Hi Noir Nail Bar — I'd like to reserve an appointment.",
   },
 
   // ——— SEO ———
@@ -234,7 +233,7 @@ const salonConfig: SalonConfig = {
     description:
       "Book manicures, pedicures, and beauty treatments at Noir Nail Bar. Clean, calm, and easy to reach on WhatsApp.",
     ogImage:
-      "https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=1200&q=85",
     siteUrl: "https://example.com",
   },
 
@@ -245,12 +244,12 @@ const salonConfig: SalonConfig = {
     url: "",
   },
 
-  // ——— Nav anchors (match section ids on the page) ———
+  // ——— Nav anchors ———
   nav: [
     { label: "Services", href: "#services" },
     { label: "Gallery", href: "#gallery" },
     { label: "About", href: "#about" },
-    { label: "Hours", href: "#hours" },
+    { label: "Visit", href: "#hours" },
     { label: "Contact", href: "#contact" },
   ],
 };

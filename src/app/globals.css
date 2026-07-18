@@ -5,12 +5,12 @@
   Change hex values in src/data/salonConfig.ts — not here — for client re-skins.
 */
 :root {
-  --salon-primary: #c4787a;
-  --salon-primary-dark: #a85f62;
-  --salon-secondary: #f3e4e2;
-  --salon-background: #fbf7f5;
-  --salon-foreground: #2c2422;
-  --salon-muted: #6b5e5a;
+  --salon-primary: #4f5f4d;
+  --salon-primary-dark: #3b493a;
+  --salon-secondary: #e0e5dc;
+  --salon-background: #f2f4f0;
+  --salon-foreground: #161b17;
+  --salon-muted: #566058;
 }
 
 @theme inline {
@@ -47,19 +47,49 @@ body {
   color: var(--salon-foreground);
   font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
   background-image:
-    radial-gradient(ellipse 80% 50% at 100% -10%, color-mix(in srgb, var(--salon-secondary) 80%, transparent), transparent),
-    radial-gradient(ellipse 60% 40% at 0% 100%, color-mix(in srgb, var(--salon-secondary) 55%, transparent), transparent);
+    radial-gradient(
+      ellipse 85% 50% at 100% -5%,
+      color-mix(in srgb, var(--salon-secondary) 85%, transparent),
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse 60% 40% at 0% 100%,
+      color-mix(in srgb, var(--salon-primary) 10%, transparent),
+      transparent 50%
+    );
   background-attachment: fixed;
+  letter-spacing: 0.01em;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--salon-primary) 28%, transparent);
+  color: var(--salon-foreground);
 }
 
 .font-display {
   font-family: var(--font-display), ui-serif, Georgia, serif;
 }
 
-@keyframes hero-in {
+.section-label {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--salon-primary);
+}
+
+.section-title {
+  font-family: var(--font-display), ui-serif, Georgia, serif;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: var(--salon-foreground);
+}
+
+@keyframes hero-reveal {
   from {
     opacity: 0;
-    transform: translateY(1rem);
+    transform: translateY(1.25rem);
   }
   to {
     opacity: 1;
@@ -67,12 +97,31 @@ body {
   }
 }
 
+@keyframes ken-burns {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
 .animate-hero-in {
-  animation: hero-in 0.9s ease-out both;
+  animation: hero-reveal 1.05s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-hero-in-delay {
+  animation: hero-reveal 1.05s cubic-bezier(0.22, 1, 0.36, 1) 0.18s both;
+}
+
+.animate-ken-burns {
+  animation: ken-burns 20s ease-out forwards;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .animate-hero-in {
+  .animate-hero-in,
+  .animate-hero-in-delay,
+  .animate-ken-burns {
     animation: none;
   }
 }

@@ -5,13 +5,9 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 type FadeInProps = {
   children: ReactNode;
   className?: string;
-  /** Delay in ms before starting the fade */
   delay?: number;
 };
 
-/**
- * Subtle scroll fade-in. Respects prefers-reduced-motion.
- */
 export default function FadeIn({ children, className = "", delay = 0 }: FadeInProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
@@ -33,7 +29,7 @@ export default function FadeIn({ children, className = "", delay = 0 }: FadeInPr
           observer.disconnect();
         }
       },
-      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" },
+      { threshold: 0.14, rootMargin: "0px 0px -48px 0px" },
     );
 
     observer.observe(el);
@@ -45,8 +41,8 @@ export default function FadeIn({ children, className = "", delay = 0 }: FadeInPr
       ref={ref}
       style={{ transitionDelay: `${delay}ms` }}
       className={[
-        "transition-all duration-700 ease-out",
-        visible ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0",
+        "transition-all duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)]",
+        visible ? "translate-y-0 opacity-100" : "translate-y-7 opacity-0",
         className,
       ].join(" ")}
     >
